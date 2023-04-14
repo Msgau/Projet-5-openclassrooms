@@ -1,3 +1,6 @@
+# Version 1.0.0
+
+CACHE:
 ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg
 ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg
 ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg
