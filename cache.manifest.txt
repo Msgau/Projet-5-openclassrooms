@@ -1,0 +1,14 @@
+./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg
+./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg
+./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg
+./assets/images/nina.jpg
+./assets/images/TinyGallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg
+./assets/images/TinyGallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg
+./assets/images/TinyGallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg
+./assets/images/TinyGallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg
+./assets/images/TinyGallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg
+./assets/images/TinyGallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg
+./assets/images/TinyGallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg
+./assets/images/TinyGallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg
+./assets/images/TinyGallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg
+./assets/images/camera.jpg
