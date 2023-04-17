@@ -13,7 +13,7 @@
 	<meta property="og:description" content="Site web de la photographe Bordelaise Nina Carducci"/>
 	<meta name="twitter:title" content="Nina Carducci Photographie Bordeaux">
 	<meta name="twitter:description" content="Site web de la photographe Bordelaise Nina Carducci">
-	<meta name="twitter:image" content="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg">
+	<meta name="twitter:image" content="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp">
 	<title>Nina Carducci Photographie Bordeaux</title>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
@@ -30,9 +30,9 @@
 	<script src="./assets/scripts.js"></script>
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 	<header class="top-header">
-		<h1 class="name">Nina Carducci</h1>
+		<h1 class="name" itemprop="name">Nina Carducci</h1>
 			<div class="nav">
 				<ul>
 					<li><a href="#about">À propos</a></li>
@@ -57,16 +57,16 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img alt="Homme d'affaire" src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" 
-						class="d-block w-100" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg 1x, assets/images/mobileSlider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg 2x">
+					<img alt="Homme d'affaire" src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" 
+						class="d-block w-100">
 				</div>
 				<div class="carousel-item">
-					<img alt="Photo concert" src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg"
-						class="d-block w-100" srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg 1x, ./assets/images/mobileSlider/nicholas-green-nPz8akkUmDI-unsplash.jpg 2x">
+					<img alt="Photo concert" src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp"
+						class="d-block w-100">
 				</div>
 				<div class="carousel-item">
-					<img alt="Photo mariage" src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
-						class="d-block w-100" srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg 1x, ./assets/images/mobileSlider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg 2x">
+					<img alt="Photo mariage" src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
+						class="d-block w-100">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -84,7 +84,7 @@
 	<main>
 		<aside id="about">
 			<div class="picture left">
-				<img alt="Nina" src="./assets/images/nina.jpg" srcset="./assets/images/nina.jpg 1x, ./assets/images/ninaMobile.jpg 2x">
+				<img alt="Nina" src="./assets/images/nina.webp">
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
@@ -108,7 +108,7 @@
 		<article id="gallery">
 			<h2 class="title">Portfolio</h2>
 			<div class="container py-3">
-				<div class="gallery">
+				<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
 					<img data-gallery-tag="Concert" alt="Aaron Paul" class="gallery-item"
 						src="./assets/images/TinyGallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" />
 					<img data-gallery-tag="Entreprises" alt="Ali" class="gallery-item"
@@ -206,7 +206,7 @@
 				</form>
 			</div>
 			<div class="picture right">
-				<img alt="camera" src="./assets/images/camera.jpg">
+				<img alt="camera" src="./assets/images/camera.webp">
 				<p>Nina Carducci, </br><span itemprop=”streetAddress”>68 avenue Alsace-Lorraine, </span></br><span itemprop=”postalCode”>33200</span><span itemprop=”addressLocality”> Bordeaux</span></p>
 			</div>
 		</div>
