@@ -17,6 +17,7 @@
 	<title>Nina Carducci Photographie Bordeaux</title>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script type="module" src="./assets/index.js" defer></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -24,9 +25,6 @@
 		rel="stylesheet">
 	<meta charset="UTF-8">
 	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -104,29 +102,45 @@
 					<p>Je suis domiciliée à <span itemprop=”addressRegion”> Bordeaux</span>, n'hésitez pas à m'envoyer un message via le formulaire de contact pour toute demande de renseignement.</p>
 			</div>
 		</aside>
+		
 		<article id="gallery">
 			<h2 class="title">Portfolio</h2>
 			<div class="container py-3">
-				<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-					<img data-gallery-tag="Concert" alt="Aaron Paul" class="gallery-item"
-						src="./assets/images/TinyGallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" />
-					<img data-gallery-tag="Entreprises" alt="Ali" class="gallery-item"
-						src="./assets/images/TinyGallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" />
-					<img data-gallery-tag="Entreprises" alt="Jason Goodman" class="gallery-item"
-						src="./assets/images/TinyGallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" />
-					<img data-gallery-tag="Mariages" alt="Hannah Businf" class="gallery-item"
-						src="./assets/images/TinyGallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" />
-					<img data-gallery-tag="Portrait" alt="Ade Tunji" class="gallery-item"
-						src="./assets/images/TinyGallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" />
-					<img data-gallery-tag="Mariages" alt="Jakobs Owen" class="gallery-item"
-						src="./assets/images/TinyGallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" />
-					<img data-gallery-tag="Portrait" alt="Nino Van Prattenburg" class="gallery-item"
-						src="./assets/images/TinyGallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" />
-					<img data-gallery-tag="Concert" alt="Austin Neill" class="gallery-item"
-						src="./assets/images/TinyGallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" />
-					<img data-gallery-tag="Entreprises" alt="Mateus Campos Felipe" class="gallery-item"
-						src="./assets/images/TinyGallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" />
+				<div class="filtres">
+					<button class="btnTous">Tous</button>
+					<button class="btnConcert">Concert</button>
+					<button class="btnEntreprises">Entreprises</button>
+					<button class="btnMariages">Mariages</button>
+					<button class="btnPortrait">Portrait</button>
 				</div>
+				<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+					<img data-tag="Concert" alt="Aaron Paul" class="gallery-item"
+						src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"/>
+					<img data-tag="Entreprises" alt="Ali" class="gallery-item"
+						src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"/>
+					<img data-tag="Entreprises" alt="Jason Goodman" class="gallery-item"
+						src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"/>
+					<img data-tag="Mariages" alt="Hannah Businf" class="gallery-item"
+						src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"/>
+					<img data-tag="Portrait" alt="Ade Tunji" class="gallery-item"
+						src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"/>
+					<img data-tag="Mariages" alt="Jakobs Owen" class="gallery-item"
+						src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"/>
+					<img data-tag="Portrait" alt="Nino Van Prattenburg" class="gallery-item"
+						src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"/>
+					<img data-tag="Concert" alt="Austin Neill" class="gallery-item"
+						src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"/>
+					<img data-tag="Entreprises" alt="Mateus Campos Felipe" class="gallery-item"
+						src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"/>
+				</div>
+
+
+				  <aside class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+					<div class="modal-wrapper js-modal-stop">
+					</div>
+				  </aside>
+
+
 			</div>
 			<div class="quote">
 				<figure>
