@@ -54,7 +54,6 @@ for (let i = 0; i < buttons.length; i++) {
 
 let modal = null;
 let currentImageIndex = 0;
-
 function stopPropagation(e) {
     e.stopPropagation()
 }
@@ -89,12 +88,12 @@ window.addEventListener('keydown', function (e) {
 
 function afficherimage() {
     const imagesElements = document.querySelectorAll(".gallery-item");
-    imagesElements.forEach(item => {
-        item.addEventListener('click', openModal); // Ouverture de la modale
-    });
     const modalWrapper = document.querySelector(".modal-wrapper");
 
-    imagesElements.forEach((item, index) => {
+    for (let index = 0; index < imagesElements.length; index++) {
+        const item = imagesElements[index];
+        item.addEventListener('click', openModal); // Ouverture de la modale
+
         item.addEventListener("click", function (event) {
             event.preventDefault();
 
@@ -111,7 +110,7 @@ function afficherimage() {
             leftBtn.className = "modal-prev-btn"
             leftBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                console.log(imagesElements)
+                console.log(currentImageIndex)
                 if (currentImageIndex > 0) {
                     currentImageIndex--;
                 } else {
@@ -140,9 +139,8 @@ function afficherimage() {
 
             currentImageIndex = index;
         });
-    });
+    }
 }
 
+
 afficherimage();
-
-
