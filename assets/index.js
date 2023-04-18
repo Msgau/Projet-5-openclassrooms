@@ -3,14 +3,14 @@
 function changerCouleurVert() {
     document.querySelector(".btnTous").style.color = "#1D6154";
     document.querySelector(".btnTous").style.backgroundColor = "white"
-  }
-  function changerCouleurBlanc() {
+}
+function changerCouleurBlanc() {
     document.querySelector(".btnTous").style.color = "white";
     document.querySelector(".btnTous").style.backgroundColor = "#864713"
-  }
-  
-  document.querySelectorAll('.btnConcert, .btnEntreprises, .btnMariages, .btnPortrait').forEach(button => { button.addEventListener("click", changerCouleurVert) })
-  document.querySelector(".btnTous").addEventListener("click", changerCouleurBlanc)
+}
+
+document.querySelectorAll('.btnConcert, .btnEntreprises, .btnMariages, .btnPortrait').forEach(button => { button.addEventListener("click", changerCouleurVert) })
+document.querySelector(".btnTous").addEventListener("click", changerCouleurBlanc)
 
 
 //   Fonction filtre 
@@ -35,12 +35,12 @@ const images = document.querySelectorAll('.gallery-item');
 
 // Ajout de l'événement "click" à chaque bouton de filtre
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    const tag = this.textContent;
-    for (let j = 0; j < images.length; j++) {
-      images[j].style.display = (images[j].getAttribute('data-tag') === tag || tag === 'Tous') ? 'block' : 'none';
-    }
-  });
+    buttons[i].addEventListener('click', function () {
+        const tag = this.textContent;
+        for (let j = 0; j < images.length; j++) {
+            images[j].style.display = (images[j].getAttribute('data-tag') === tag || tag === 'Tous') ? 'block' : 'none';
+        }
+    });
 }
 
 // On utilise une boucle for...of pour itérer sur chaque bouton du filtre. 
@@ -53,12 +53,13 @@ for (let i = 0; i < buttons.length; i++) {
 // Modale
 
 let modal = null;
+let currentImageIndex = 0;
 
 function stopPropagation(e) {
     e.stopPropagation()
-  }
+}
 
-  function closeModal(e) {
+function closeModal(e) {
     if (modal === null) return;
     e.preventDefault()
     modal.style.display = "none"
@@ -67,9 +68,9 @@ function stopPropagation(e) {
     modal.removeEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
     modal = null
-  }
+}
 
-  function openModal(e) {
+function openModal(e) {
     e.preventDefault();
     const target = document.querySelector('.modal')
     target.style.display = null
@@ -78,40 +79,70 @@ function stopPropagation(e) {
     modal = target
     modal.addEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').addEventListener('click', stopPropagation)
-    
-  }
-  window.addEventListener('keydown', function (e) {
+}
+
+window.addEventListener('keydown', function (e) {
     if (e.key === "Escape") {
-      closeModal(e)
+        closeModal(e)
     }
-  })
+})
 
-  document.querySelectorAll(".gallery-item").forEach(item => {
-    item.addEventListener('click', openModal);
-  });
-  
-  // Afficher l'image dans la modale
-
-  function afficherimage() {
+function afficherimage() {
     const imagesElements = document.querySelectorAll(".gallery-item");
-    const modalWrapper = document.querySelector(".modal-wrapper");
-    
-    imagesElements.forEach((item) => {
-      item.addEventListener("click", function (event) {
-        event.preventDefault();
-        
-        // Supprime l'ancienne image de la modale s'il y en a une
-        while (modalWrapper.firstChild) {
-          modalWrapper.removeChild(modalWrapper.firstChild);
-        }
-        
-        const imageElement = document.createElement("img");
-        imageElement.src = event.target.src;
-        imageElement.alt = "fef";
-        
-        modalWrapper.appendChild(imageElement);
-      });
+    imagesElements.forEach(item => {
+        item.addEventListener('click', openModal); // Ouverture de la modale
     });
-  }
+    const modalWrapper = document.querySelector(".modal-wrapper");
+
+    imagesElements.forEach((item, index) => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Supprime l'ancienne image de la modale s'il y en a une
+            while (modalWrapper.firstChild) {
+                modalWrapper.removeChild(modalWrapper.firstChild);
+            }
+
+            const imageElement = document.createElement("img");
+            imageElement.src = event.target.src;
+            imageElement.alt = event.target.alt;
+
+            const leftBtn = document.createElement("button")
+            leftBtn.className = "modal-prev-btn"
+            leftBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                console.log(imagesElements)
+                if (currentImageIndex > 0) {
+                    currentImageIndex--;
+                } else {
+                    currentImageIndex = imagesElements.length - 1;
+                }
+                imageElement.src = imagesElements[currentImageIndex].src;
+                imageElement.alt = imagesElements[currentImageIndex].alt;
+            });
+
+            const rightBtn = document.createElement("button")
+            rightBtn.className = "modal-next-btn"
+            rightBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (currentImageIndex < imagesElements.length - 1) {
+                    currentImageIndex++;
+                } else {
+                    currentImageIndex = 0;
+                }
+                imageElement.src = imagesElements[currentImageIndex].src;
+                imageElement.alt = imagesElements[currentImageIndex].alt;
+            });
+
+            modalWrapper.appendChild(leftBtn);
+            modalWrapper.appendChild(rightBtn);
+            modalWrapper.appendChild(imageElement);
+
+            currentImageIndex = index;
+        });
+    });
+}
+
 afficherimage();
-  
+
+
