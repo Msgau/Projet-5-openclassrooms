@@ -1,3 +1,5 @@
+// Carroussel
+
 // Variables globales
 let compteur = 0; // Compteur qui permet de connaître l'image sur laquelle on se trouve
 let timer, elements, slides, slideWidth, speed, transition;
@@ -19,8 +21,8 @@ window.onload = () => {
 
     slides = Array.from(elements.children);
 
-    // On récupère la largeur d'une slide
-    slideWidth = diapo.getBoundingClientRect().width;
+    // On calcule la largeur des slides
+    calculateSlideWidth();
 
     // On récupère les flèches
     let next = document.querySelector(".carousel-control-next");
@@ -36,7 +38,22 @@ window.onload = () => {
     // On gère l'arrêt et la reprise
     diapo.addEventListener("mouseover", stopTimer);
     diapo.addEventListener("mouseout", startTimer);
+
+    // On recalcule la largeur des slides lorsque la fenêtre est redimensionnée
+    window.addEventListener('resize', calculateSlideWidth);
 }
+
+function calculateSlideWidth() {
+    // On récupère la largeur de l'écran
+    let screenWidth = window.innerWidth;
+    // On récupère la largeur de l'élément ".diapo"
+    let diapoWidth = document.querySelector(".diapo").getBoundingClientRect().width;
+    // On calcule la largeur des slides en fonction de la largeur de l'écran
+    slideWidth = screenWidth < diapoWidth ? screenWidth : diapoWidth;
+}
+
+
+
 
 /**
  * Cette fonction fait défiler le diaporama vers la droite
