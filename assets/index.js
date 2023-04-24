@@ -52,9 +52,6 @@ function calculateSlideWidth() {
     slideWidth = screenWidth < diapoWidth ? screenWidth : diapoWidth;
 }
 
-
-
-
 /**
  * Cette fonction fait défiler le diaporama vers la droite
  */
@@ -114,8 +111,7 @@ function slidePrev(){
     }
 
     let decal = -slideWidth * compteur;
-    elements.style.transform = `translateX(${decal}px)`;
-    
+    elements.style.transform = `translateX(${decal}px)`;   
 }
 
 function stopTimer(){
@@ -135,13 +131,13 @@ for (let button of buttonsCar) {
     const index = parseInt(button.id.substring(3)) - 1;
     // Si l'index est supérieur au compteur, on fait glisser vers la droite.
     if (index > compteur) {
-      for (let i = -1; i < index - compteur; i++) {
+      for (let i = 0; i <= index - compteur; i++) {
         slideNext();
       }
     }
     // Si l'index est inférieur au compteur, on fait glisser vers la gauche.
     else if (index < compteur) {
-      for (let i = -1; i < compteur - index; i++) {
+      for (let i = 0; i <= compteur - index; i++) {
         slidePrev();
       }
     }
@@ -187,14 +183,26 @@ for (var i = 0; i < buttonsCouleurs.length; i++) {
 // Avec For...of
 const buttons = document.querySelectorAll('.filtres button');
 const images = document.querySelectorAll('.gallery-item');
+const galleryAnimation = document.querySelector(".gallery")
 
 // Ajout de l'événement "click" à chaque bouton de filtre
+
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
         const tag = this.textContent;
         for (let j = 0; j < images.length; j++) {
-            images[j].style.display = (images[j].getAttribute('data-tag') === tag || tag === 'Tous') ? 'block' : 'none';
+            const image = images[j];
+            if (image.getAttribute('data-tag') === tag || tag === 'Tous') {
+                image.style.display = 'block';
+                galleryAnimation.classList.add('fade-in');
+                galleryAnimation.addEventListener('animationend', function () {
+                galleryAnimation.classList.remove('fade-in');
+                });
+            } else {
+                image.style.display = 'none';
+            }
         }
+        
     });
 }
 
