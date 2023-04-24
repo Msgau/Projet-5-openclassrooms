@@ -144,8 +144,6 @@ for (let button of buttonsCar) {
   });
 }
 
-
-
 // Couleur des filtres
 
 var buttonsCouleurs = document.querySelectorAll('.filtres button');
@@ -165,20 +163,6 @@ for (var i = 0; i < buttonsCouleurs.length; i++) {
 
 
 //   Fonction filtre 
-
-// // Avec ForEach
-// const buttons = document.querySelectorAll('.filtres button');
-// const images = document.querySelectorAll('.gallery-item');
-
-// // Ajout de l'événement "click" à chaque bouton de filtre
-// buttons.forEach((button) => {
-//   button.addEventListener('click', () => {
-//     const tag = button.textContent;
-//     images.forEach((img) => {
-//       img.style.display = (img.getAttribute('data-tag') === tag || tag === 'Tous') ? 'block' : 'none';
-//     });
-//   });
-// });
 
 // Avec For...of
 const buttons = document.querySelectorAll('.filtres button');
