@@ -1,17 +1,20 @@
-# Version 1.0.0
+# Version 1.0.1
 
 CACHE:
-./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg
-./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg
-./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg
-./assets/images/nina.jpg
-./assets/images/TinyGallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg
-./assets/images/TinyGallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg
-./assets/images/TinyGallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg
-./assets/images/TinyGallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg
-./assets/images/TinyGallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg
-./assets/images/TinyGallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg
-./assets/images/TinyGallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg
-./assets/images/TinyGallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg
-./assets/images/TinyGallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg
-./assets/images/camera.jpg
+./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp
+./assets/images/mobileSlider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp
+./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp
+./assets/images/mobileSlider/nicholas-green-nPz8akkUmDI-unsplash.webp
+./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp
+./assets/images/mobileSlider/edward-cisneros-3_h6-1NPDGw-unsplash.webp
+./assets/images/nina.webp
+./assets/images/TinyGallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp
+./assets/images/TinyGallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp
+./assets/images/TinyGallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp
+./assets/images/TinyGallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp
+./assets/images/TinyGallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp
+./assets/images/TinyGallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp
+./assets/images/TinyGallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp
+./assets/images/TinyGallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp
+./assets/images/TinyGallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp
+./assets/images/camera.webp
